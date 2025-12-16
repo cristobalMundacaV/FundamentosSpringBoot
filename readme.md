@@ -66,3 +66,6 @@ Implementado desde la configuracion incial para:
 -Proyecto configurado
 -Conexion a base de datos funcional
 -Arquitectura definida
+-Agregacion de Carpeta models
+-Agregacion de Clase Producto
+-Clase Producto Funcionando correctamente
