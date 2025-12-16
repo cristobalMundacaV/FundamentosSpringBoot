@@ -69,3 +69,7 @@ Implementado desde la configuracion incial para:
 -Agregacion de Carpeta models
 -Agregacion de Clase Producto
 -Clase Producto Funcionando correctamente
+-Agregacion de Carpeta Repository 
+-Agregacion de Carpeta Service 
+-Agregacion de Interfaz a Repository
+-Agregacion de Interfaz a Service
