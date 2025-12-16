@@ -73,3 +73,6 @@ Implementado desde la configuracion incial para:
 -Agregacion de Carpeta Service 
 -Agregacion de Interfaz a Repository
 -Agregacion de Interfaz a Service
+-Creacion de Controller 
+-Realizacion de Pruebas con PostMan Realizada
+-Todos los puntos get post put delete Funcionando correctamente
