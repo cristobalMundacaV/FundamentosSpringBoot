@@ -2,17 +2,19 @@
 
 # Descripcion del Proyecto
 
-Este proyecto corresponde a la segunda etapadentro de un plan de formacion profesional orientado al desarrollo backend.
-En esta fase se configuro la base de una API REST, con estructura limpia, junto a la conexion a base de datos relacional, ademas de cubrir los valores de autenticacion con variables locales todo esto con el fin de sentar las bases para una arquitectura escalable y segura.
+Este proyecto corresponde a la segunda etapa dentro de un plan de formacion profesional orientado al desarrollo backend.
+En esta fase se configuro la base de una API REST, con estructura limpia, junto a la conexion a base de datos relacional, ademas de buenas practicas de configuracion con el fin de sentar las bases para una aplicacion escalable,mantenible y segura.
 
 # Objetivo Principal
 
 El objetivo Principal de esta etapa es:
 
 -Validar el entorno de desarrollo de nuestro proyecto,
--Configurar de manera correcta Spring Boot y saber desplegarlo en cualquier sistema.
--Establecer una conexion con el sistema de base de datos que deseemos.
--Aplicar control de Versiones desde el Inicio (Gracias a la primera Etapa de esta formacion profesional)
+-Configurar de manera correcta Spring Boot
+-Comprender el proceso de Despliegue de la aplicacion
+-Establecer una conexion con el sistema de base de datos relacional
+-Aplicar control de Versiones desde el Inicio del Desarrollo de la Aplicacion.
+-Implementar una arquitectura backend profesional
 
 # Tecnologias utilizadas 
 
@@ -24,6 +26,7 @@ El objetivo Principal de esta etapa es:
 -Maven
 -Git
 -GitHub
+-PostMan
 
 # Configuracion del entorno
 
@@ -31,7 +34,7 @@ El objetivo Principal de esta etapa es:
 -Java JDK 17+
 -SQL Server en ejecucion.
 -Git Instalado
--IDE VSCODE
+-IDE Visual Studio Code
 
 ## Creacion de la base de datos
 
@@ -41,17 +44,45 @@ Las tablas se generan automaticamente gracias a JPA e Hibernate
 
 ## Configuracion de la aplicacion
 
-Se aplicaron buenas practicas como el manejo de las credenciales de inicio de sesion con variables de entorno ademas de la configuracion general de la aplicacion en aplication.properties.
+-Configuracion general en application.properties
+-uso de variables de entorno para manejar credenciales de base de datos
+-Separacion clara de responsabilidades por capas
 
 ## Verificacion de funcionamiento
 
-La aplicacion se conecta de manera exitosa a la base de datos ademas de inicializar sus servicios sin problema alguno.
+-La aplicacion se inicializa de manera exitosa
+-Hay conexion con la base de datos
+-Servicios y controladores cargados sin problemas
+-Endpoint testeados a travez de PostMan
 
 # Arquitectura base
 
 El proyecto usa una arquitectura en capas para evitar acomplamiento y facilitar la escalabilidad del sistema
 
-Cliente --> Controller --> Service --> Repository --> Service --> Controller --> Cliente
+Cliente --> Controller --> Service --> Repository --> Base de Datos
+
+# Funcionalidades Implementadas
+
+## Entidades 
+
+-Producto
+-Categoria
+-Relacion ManyToOne entre Producto y Categoria
+
+# Endpoint REST
+
+Se implemento un CRUD completo para ambas entidades
+
+-GET (listar y obtener por ID)
+-POST (crear)
+-PUT (actualizar)
+-DELETE(eliminar)
+
+Todos estos metodos fueron probados de manera exitosa en la plataforma PostMan
+
+# Validaciones
+
+Las Validaciones de campo se realizaron con Jakarta Validation corroborando que arroje los errores HTTP Esperados
 
 # Control de Versiones
 
@@ -60,19 +91,16 @@ Implementado desde la configuracion incial para:
 -Registrar los avances en cada parte del proyecto
 -Evidenciar Mejora Continua
 -Mantener un historial limpio y ordenado
+-Facilitar el seguimiento del Proyecto
 
 # Estado del Proyecto 
 
--Proyecto configurado
+-Proyecto configurado correctamente
 -Conexion a base de datos funcional
 -Arquitectura definida
--Agregacion de Carpeta models
--Agregacion de Clase Producto
--Clase Producto Funcionando correctamente
--Agregacion de Carpeta Repository 
--Agregacion de Carpeta Service 
--Agregacion de Interfaz a Repository
--Agregacion de Interfaz a Service
--Creacion de Controller 
--Realizacion de Pruebas con PostMan Realizada
--Todos los puntos get post put delete Funcionando correctamente
+-Capas controller,service, repository y models implementadas
+-CRUD completo para las 2 entidades
+-Relacion entre entidades testeada
+-Validaciones implementadas
+-Realizacion de Pruebas con PostMan
+-API REST Completamente Funcional
